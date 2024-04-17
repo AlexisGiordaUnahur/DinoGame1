@@ -14,6 +14,8 @@ object juego{
 		game.addVisual(reloj)
 	
 		keyboard.space().onPressDo{ self.jugar()}
+		keyboard.enter().onPressDo{ game.say(dino, "aguante boca")}
+		keyboard.b().onPressDo{game. say(dino, "buuu")}
 		
 		game.onCollideDo(dino,{ obstaculo => obstaculo.chocar()})
 		
@@ -68,6 +70,11 @@ object reloj {
 	method detener(){
 		game.removeTickEvent("tiempo")
 	}
+	
+	method chocar(){
+		self.detener()
+	}
+	
 }
 
 object cactus {
@@ -96,6 +103,8 @@ object cactus {
     method detener(){
 		game.removeTickEvent("moverCactus")
 	}
+	
+	
 }
 
 object suelo{
@@ -117,7 +126,7 @@ object dino {
 	method saltar(){
 		if(position.y() == suelo.position().y()) {
 			self.subir()
-			game.schedule(velocidad*3,{self.bajar()})
+			game.schedule(velocidad*3,{self.bajar()}) //el schedule hace que baje 
 		}
 	}
 	
@@ -138,4 +147,30 @@ object dino {
 	method estaVivo() {
 		return vivo
 	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+var x = {2+2} devuelve {2+2}
+si hago x.apply() lo resuelve
+
+	listas/arrays/arreglos
+
+en esta materia se llama "colecciones"
+contiene otros objetos pero también son objetos
+
+const mochila = [cuaderno, computadora, cartuchera]
+mochila.size() -> 3
+mochila.contains(cuaderno) -> true
+mochila.contains(auriculares) -> false
+mochila.first() -> cuaderno
+mochila.last() -> cartuchera
+
+mochila.add(auriculares)
+
+ahora -> mochila = [cuaderno, computadora, cartuchera, auriculares]
+mochila.size() -> 4
+mochila.contains(cuaderno) -> true
+mochila.contains(auriculares) -> true
+
+mochila.remove(cuaderno)
+
+ahora -> mochila = [computadora, cartuchera, auriculares]
+mochila.size() -> 3
+mochila.contains(cuaderno) -> false
+mochila.contains(auriculares) -> true
+
+mochila.first() -> computadora
+mochila.last() -> auriculares
+
+mochila.anyOne() -> devuelve un elemento al azar 
+
+addAll agrega todos los elementos de una lista en otra
+clear borra todos los elementos
+reverse te devuelve la lista al revés
